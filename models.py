@@ -18,6 +18,10 @@ class Pessoas(Base):
     def __repr__(self):
         return f'<Pessoa {self.nome} >'
     
+    def save(self):
+        db_session.add(self)
+        db_session.commit()
+    
     def delete(self):
         db_session.delete(self)
         db_session.commit()
@@ -29,6 +33,14 @@ class Atividades(Base):
     nome = Column(String(80))
     pessoa_id = Column(Integer, ForeignKey('pessoas.id'))
     pessoa = relationship("Pessoas")
+
+    def save(self):
+        db_session.add(self)
+        db_session.commit()
+    
+    def delete(self):
+        db_session.delete(self)
+        db_session.commit()
 
 
 def init_db():

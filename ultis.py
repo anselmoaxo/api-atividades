@@ -3,16 +3,14 @@ from models import Pessoas,  db_session
 
 def insere_pessoas():
     pessoa = Pessoas(nome='Joao', idade=72)
-    db_session.add(pessoa)
-    db_session.commit()
+    pessoa.save()
 
 
 def consulta_pessoas():
     pessoa = Pessoas.query.all()
     pessoa = Pessoas.query.filter_by(nome='Joao').first()
-    print(pessoa)
     
-
+    
 
 def altera_pessoa():
     pessoa = Pessoas.query.filter_by(nome='Anselmo').first()
@@ -27,5 +25,4 @@ def exclui_pessoa():
 
 
 if __name__=='__main__':
-    exclui_pessoa()
-    consulta_pessoas()
+    insere_pessoas()
