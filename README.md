@@ -1,6 +1,6 @@
 # Rest APIs com Flask e SQLAlchemy
 
-###Este projeto consiste em um sistema de API Restful desenvolvido em Python utilizando o framework Flask, integrado com o ORM SQLAlchemy para manipulação do banco de dados. O sistema inclui autenticação de login e senha, utilizando tokens JWT para proteger rotas específicas.###
+## Este projeto consiste em um sistema de API Restful desenvolvido em Python utilizando o framework Flask, integrado com o ORM SQLAlchemy para manipulação do banco de dados. O sistema inclui autenticação de login e senha, utilizando tokens JWT para proteger rotas específicas. ##
 
 ## Configuração
 
